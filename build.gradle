@@ -8,54 +8,45 @@ buildscript {
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
-
-
 }
 
-subprojects {
+apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
-    apply plugin: 'java'
-    apply plugin: 'eclipse'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
+mainClassName = 'br.com.infinity.corbus.CorbusApplication'
 
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
+}
 
-    jar {
-        manifest {
-            attributes 'Main-Class': 'br.com.infinity.corbus.CorbusApplication'
-            attributes 'Implementation-Version': '1.0.0.RELEASE'
-        }
-    }
-
-    jar.enabled = true
-
-
-    dependencies {
-        compile('org.springframework.boot:spring-boot-starter-actuator')
-        compile('org.springframework.boot:spring-boot-starter-data-jpa')
-        compile('org.springframework.boot:spring-boot-starter-security')
-        compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-        compile('org.springframework.boot:spring-boot-starter-web')
-        compile('org.flywaydb:flyway-core')
-        compile('org.springframework.session:spring-session-core')
-        runtime('com.h2database:h2')
-        compileOnly('org.projectlombok:lombok')
-        testCompile('org.springframework.boot:spring-boot-starter-test')
-        testCompile('org.springframework.security:spring-security-test')
-
-        compile('javax.servlet:jstl')
-        compile('org.springframework.boot:spring-boot-starter-tomcat')
-        compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+jar {
+    manifest {
+        attributes 'Main-Class': 'br.com.infinity.corbus.CorbusApplication'
+        attributes 'Implementation-Version': '1.0.0.RELEASE'
     }
 }
 
-project(":corbus-web") {
+jar.enabled = true
 
-    apply plugin: 'application'
-    mainClassName = 'br.com.infinity.corbus.CorbusApplication'
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.flywaydb:flyway-core')
+    compile('org.springframework.session:spring-session-core')
+    runtime('com.h2database:h2')
+    compileOnly('org.projectlombok:lombok')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
+
+    compile('javax.servlet:jstl')
+    compile('org.springframework.boot:spring-boot-starter-tomcat')
+    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
 }
 
 
