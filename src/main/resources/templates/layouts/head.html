@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <th:block th:fragment="metas">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Custom Fonts -->
+        <link th:href="@{/vendor/font-awesome/css/font-awesome.min.css}" href="../../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- Custom CSS -->
+        <link th:href="@{/css/style.css}" href="../../static/css/style.css" rel="stylesheet" />    
+    </th:block>
+
+    <th:block th:fragment="scripts">
+        <!-- jQuery -->
+        <script th:src="@{/vendor/jquery/jquery.min.js}" src="../../static/vendor/jquery/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script th:src="@{/vendor/bootstrap/js/bootstrap.min.js}" src="../../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    </th:block>
+</html>

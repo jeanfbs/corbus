@@ -14,12 +14,23 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.templateresolver.ITemplateResolver;
 
 @Configuration
 public class ApplicationConfiguration implements WebMvcConfigurer {
 
     @Value("${date.format}")
     private String dateFormat;
+
+    @Value(("${spring.thymeleaf.prefix}"))
+    private String prefix;
+
+    @Value("${spring.thymeleaf.suffix}")
+    private String sufix;
+
+    @Value("${spring.thymeleaf.mode}")
+    private String mode;
 
     @Bean
     @Primary
@@ -41,5 +52,19 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(new LocalDateConversor(dateFormat));
+    }
+
+
+    @Bean
+    public ITemplateResolver templateResolver(){
+
+        SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
+        resolver.setPrefix(prefix);
+        resolver.setSuffix(sufix);
+        resolver.setCacheable(false);
+        resolver.setTemplateMode(mode);
+        resolver.setOrder(0);
+
+        return resolver;
     }
 }

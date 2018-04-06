@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Corbus - Parceiros</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link th:href="@{/css/style.css}" href="../../static/css/style.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link th:href="@{/vendor/font-awesome/css/font-awesome.min.css}" href="../../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top navbar-corbus" th:fragment="menu-header">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" th:href="@{/cpanel/dashboard}" href="/cpanel/dashboard">Corbus</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Principal</a></li>
+                <li><a href="#about">Parceiros</a></li>
+                <li><a href="#contact">Vendas</a></li>
+                <li><a href="#contact">Financeiro</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user fa-fw" aria-hidden="true"></i> Jean Santos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Minha Conta</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/logout" th:href="@{/logout}">Sair</a></li>
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- jQuery -->
+    <script th:src="@{/vendor/jquery/jquery.min.js}" src="../../static/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script th:src="@{/vendor/bootstrap/js/bootstrap.min.js}" src="../../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

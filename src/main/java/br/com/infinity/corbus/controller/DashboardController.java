@@ -10,10 +10,4 @@ import org.springframework.web.servlet.ModelAndView;
 public class DashboardController {
 
 
-
-    @GetMapping("/dashboard")
-    public ModelAndView login() {
-        return new ModelAndView("layouts/root");
-    }
-
 }

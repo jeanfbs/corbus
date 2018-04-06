@@ -1,3 +1,6 @@
+body{
+  background-color: #dedede;
+}
 .navbar-corbus {
 	background-color:#536fe0;
     color:#ffffff;
@@ -17,10 +20,8 @@
   background-color: #4d5bdb;
 
 }
-
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
-  background-color: rgba(255,255,255,0.35);
-  color:#eee!important;
+.navbar-corbus .navbar-brand {
+  color:#fff;
 }
 .dropdown-header{
   color:#eee;
@@ -41,21 +42,23 @@
      
 /* dropdown */
 .navbar-corbus .navbar-nav .dropdown-menu  { 
-  background-color: #536fe0;
+  background-color: #fff;
 }
 .navbar-corbus .navbar-nav .dropdown-menu>li>a  { 
-  color: #fff;
-}
-.navbar-corbus .navbar-nav .dropdown-menu>li>a:hover,.navbar-corbus .navbar-nav .dropdown-menu>li>a:focus  { 
-  color: #364fb3;
-}
-      
-.navbar-corbus .navbar-brand {
-  	color:#eeeeee;
+  color: #222;
 }
 .navbar-corbus .navbar-toggle {
-  	background-color:#eeeeee;
+  	background-color:#222;
 }
 .navbar-corbus .icon-bar {
-  	background-color:#364fb3;
+  	background-color:#fff;
 }
+
+
+.buttons{
+  margin-top: 15px;
+}
+.card-4 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+

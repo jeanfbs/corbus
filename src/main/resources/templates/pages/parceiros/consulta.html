@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <th:block th:replace="layouts/head :: metas" />
+    <title>Parceiros</title>
+</head>
+<body>
+    <th:block th:replace="layouts/header :: menu-header" />
+      <div class="container">
+        <div class="panel panel-default card-4">
+          <div class="panel-heading">
+            <h3 class="panel-title">Parceiros</h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-sm-12">
+                <div class="col-sm-3 buttons">
+                    <button type="button" class="btn btn-default btn-xs"><i class="fa fa-plus fa-fw" aria-hidden="true"></i> Novo</button>
+                    <button type="button" class="btn btn-default btn-xs"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i> Editar</button>
+                    <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash-o fa-fw" aria-hidden="true"></i> Excluir</button>
+                </div>
+                <div class="col-sm-offset-3 col-sm-2">
+                    <select class="form-control">
+                      <option value="nome">Nome</option>
+                      <option value="cnpj">CNPJ</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                  <div class="input-group">
+                    <input type="text" class="form-control" />
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" type="button"><i class="fa fa-search fa-fw" aria-hidden="true"></i></button>
+                    </span>
+                  </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <br>
+            <br>
+            <div class="col-sm-12">
+              <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-striped" id="parceiro-datagrid">
+                    <thead>
+                      <tr class="active">
+                        <th class="col-sm-1 text-center">
+                            <input type="checkbox">
+                        </th>
+                        <th> Nome </th>
+                        <th> CNPJ </th>
+                        <th> ... </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /container -->
+
+      <th:block th:replace="layouts/head :: scripts" />
+</body>
+
+</html>
